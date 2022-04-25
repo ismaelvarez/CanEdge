@@ -1,0 +1,70 @@
+#
+# Copyright 2016 Telefonica Investigación y Desarrollo, S.A.U
+#
+# This file is part of perseo-fe
+#
+# perseo-fe is free software: you can redistribute it and/or modify it under the terms of the GNU Affero
+# General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your
+# option) any later version.
+# perseo-fe is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the
+# implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License
+# for more details.
+#
+# You should have received a copy of the GNU Affero General Public License along with perseo-fe. If not, see
+# http://www.gnu.org/licenses/.
+#
+# For those usages not covered by the GNU Affero General Public License please contact with iot_support at tid dot es
+#
+
+version: '3.4'
+services:
+    influx-db:
+        image: influxdb:latest
+        container_name: influx-db
+        network_mode: host
+        volumes:
+            # Mount for influxdb data directory and configuration
+            - ./influxdb:/var/lib/influxdb2:rw
+        ports:
+            - "8086:8086"
+        environment:
+            - DOCKER_INFLUXDB_INIT_PASSWORD=admin
+            - DOCKER_INFLUXDB_INIT_USERNAME=my-user
+        
+        depends_on:
+            - minio
+            
+    grafana:
+        image: grafana/grafana:latest
+        container_name: grafana
+        ports:
+            - "3000:3000"
+        network_mode: host
+        environment:
+            - plugins="crate-datasource"
+        volumes:
+            - "/var/lib/grafana:/var/lib/grafana"
+    minio:
+        image: minio/minio:latest
+        container_name: minio
+        network_mode: host
+        command: "server /home/root/data"
+        environment:
+            - MINIO_ROOT_USER=${MINIO_USER}
+            - MINIO_ROOT_PASSWORD=${MINIO_PASSWORD}
+        volumes:
+            - "${MINIO_PATH}:/home/root/data"
+            
+    influx-is:
+        image: influx-is:latest
+        container_name: influx-is
+        network_mode: host
+        volumes:
+            - "${CANEDGE_INPUTS}:/usr/app/src/canedge-influxdb-writer/dashboard-writer/inputs.py"
+            - "${CANEDGE_DBC_SOURCE}:${CANEDGE_DBC_DEST}"
+        depends_on:
+            - minio
+            - influx-db
+          
+networks:
+    default:
