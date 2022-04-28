@@ -60,11 +60,15 @@ services:
         container_name: influx-is
         network_mode: host
         volumes:
-            - "${CANEDGE_INPUTS}:/usr/app/src/canedge-influxdb-writer/dashboard-writer/inputs.py"
+            - ${CANEDGE_INPUTS}:/usr/app/src/canedge-influxdb-writer/dashboard-writer/inputs.py
             - "${CANEDGE_DBC_SOURCE}:${CANEDGE_DBC_DEST}"
+        environment:
+            - CANDEGDE_UPDATE_PERIOD=${CANDEGDE_UPDATE_PERIOD}
         depends_on:
             - minio
             - influx-db
           
 networks:
     default:
+    
+

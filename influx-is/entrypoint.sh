@@ -1,10 +1,9 @@
 #!/bin/bash
 
-# This script opens 4 terminal windows.
-cd dashboard-writer
+cd /usr/app/src/canedge-influxdb-writer/dashboard-writer
 
 while [ true ]
 do
 python main.py
-sleep 30m
+sleep ${CANDEGDE_UPDATE_PERIOD}m
 done
