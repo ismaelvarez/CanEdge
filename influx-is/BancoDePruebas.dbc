@@ -1,0 +1,94 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+BO_ 515 CDIOSController3_Petition: 4 Vector__XXX
+ SG_ C3P_Command : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C3P_ModuleID : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C3P_Selector : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ 
+BO_ 514 CDIOSController2_Petition: 4 Vector__XXX
+ SG_ C2P_Command : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C2P_ModuleID : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C2P_Selector : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 513 CDIOSController1_Petition: 4 Vector__XXX
+ SG_ C1P_Command : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C1P_ModuleID : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C1P_Selector : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 385 CDIOSController1_Response: 7 Vector__XXX
+ SG_ C1R_Command : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C1R_ModuleID : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C1R_Selector : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C1R_Signal1 : 24|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C1R_Signal2 : 25|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C1R_Signal3 : 26|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C1R_Signal4 : 27|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C1R_Signal5 : 28|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C1R_Signal6 : 29|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C1R_Signal7 : 30|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C1R_Signal8 : 31|1@1+ (1,0) [0|0] "" Vector__XXX
+ 
+BO_ 386 CDIOSController2_Response: 7 Vector__XXX
+ SG_ C2R_Command : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C2R_ModuleID : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C2R_Selector : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C2R_Signal1 : 24|1@1+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ C2R_Signal2 : 25|1@1+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ C2R_Signal3 : 26|1@1+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ C2R_Signal4 : 27|1@1+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ C2R_Signal5 : 28|1@1+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ C2R_Signal6 : 29|1@1+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ C2R_Signal7 : 30|1@1+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ C2R_Signal8 : 31|1@1+ (1,0) [0|0] "bool" Vector__XXX
+ 
+BO_ 387 CDIOSController3_Response: 7 Vector__XXX
+ SG_ C3R_Command : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CR3_ModuleID : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C3R_Selector : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ C3R_Signal1 : 24|1@1+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ C3R_Signal2 : 25|1@1+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ C3R_Signal3 : 26|1@1+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ C3R_Signal4 : 27|1@1+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ C3R_Signal5 : 28|1@1+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ C3R_Signal6 : 29|1@1+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ C3R_Signal7 : 30|1@1+ (1,0) [0|0] "bool" Vector__XXX
+ SG_ C3R_Signal8 : 31|1@1+ (1,0) [0|0] "bool" Vector__XXX
+
+
+
+
